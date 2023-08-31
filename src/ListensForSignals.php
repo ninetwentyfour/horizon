@@ -23,6 +23,7 @@ trait ListensForSignals
         pcntl_async_signals(true);
 
         pcntl_signal(SIGTERM, function () {
+            \Log::info('got sigterm signal');
             $this->pendingSignals['terminate'] = 'terminate';
         });
 
@@ -48,7 +49,8 @@ trait ListensForSignals
     {
         while ($this->pendingSignals) {
             $signal = Arr::first($this->pendingSignals);
-
+            \Log::info('checking for signals');
+            \Log::info($signal);
             $this->{$signal}();
 
             unset($this->pendingSignals[$signal]);
