@@ -26,7 +26,6 @@ class HorizonServiceProvider extends ServiceProvider
         $this->defineAssetPublishing();
         $this->offerPublishing();
         $this->registerCommands();
-        \Log::info('booted horizon');
     }
 
     /**
