@@ -1,6 +1,59 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/horizon/compare/v5.19.2...5.x)
+## [Unreleased](https://github.com/laravel/horizon/compare/v5.23.1...5.x)
+
+## [v5.23.1](https://github.com/laravel/horizon/compare/v5.23.0...v5.23.1) - 2024-02-20
+
+* Output console error when terminating due to memory usage by [@SanderMuller](https://github.com/SanderMuller) in https://github.com/laravel/horizon/pull/1391
+
+## [v5.23.0](https://github.com/laravel/horizon/compare/v5.22.1...v5.23.0) - 2024-02-12
+
+* [5.x] Improves console output and fixes Carbon v3 support by [@nunomaduro](https://github.com/nunomaduro) in https://github.com/laravel/horizon/pull/1387
+
+## [v5.22.1](https://github.com/laravel/horizon/compare/v5.22.0...v5.22.1) - 2024-01-30
+
+* Make the expiration time for temporarily failed jobs configurable by [@alirezadp10](https://github.com/alirezadp10) in https://github.com/laravel/horizon/pull/1375
+* Carbon v3 support by [@driesvints](https://github.com/driesvints) in https://github.com/laravel/horizon/pull/1380
+
+## [v5.22.0](https://github.com/laravel/horizon/compare/v5.21.5...v5.22.0) - 2024-01-16
+
+* Add cache check before registering routes by [@serpentblade](https://github.com/serpentblade) in https://github.com/laravel/horizon/pull/1367
+* Fix the pagination of recent jobs list by [@kirba](https://github.com/kirba) in https://github.com/laravel/horizon/pull/1366
+* [5.x] Laravel v11 support by [@nunomaduro](https://github.com/nunomaduro) in https://github.com/laravel/horizon/pull/1369
+* Add exit code to horizon:forget command by [@bytestream](https://github.com/bytestream) in https://github.com/laravel/horizon/pull/1370
+
+## [v5.21.5](https://github.com/laravel/horizon/compare/v5.21.4...v5.21.5) - 2023-12-29
+
+* [5.x] Pass event instance to event listeners tag() method by [@mateusjatenee](https://github.com/mateusjatenee) in https://github.com/laravel/horizon/pull/1361
+
+## [v5.21.4](https://github.com/laravel/horizon/compare/v5.21.3...v5.21.4) - 2023-11-23
+
+* Bump axios from 1.3.2 to 1.6.0 by [@dependabot](https://github.com/dependabot) in https://github.com/laravel/horizon/pull/1347
+* fix: undefined array key 'queue' by [@TomaszOnePilot](https://github.com/TomaszOnePilot) in https://github.com/laravel/horizon/pull/1351
+
+## [v5.21.3](https://github.com/laravel/horizon/compare/v5.21.2...v5.21.3) - 2023-10-27
+
+- Ensure out of memory events are raised before exiting the process by [@jameshulse](https://github.com/jameshulse) in https://github.com/laravel/horizon/pull/1341
+
+## [v5.21.2](https://github.com/laravel/horizon/compare/v5.21.1...v5.21.2) - 2023-10-17
+
+- Fix the job repository class based on service bindings by [@daison12006013](https://github.com/daison12006013) in https://github.com/laravel/horizon/pull/1335
+
+## [v5.21.1](https://github.com/laravel/horizon/compare/v5.21.0...v5.21.1) - 2023-09-19
+
+- Fixing Bug in Clear Metrics by [@joaopalopes24](https://github.com/joaopalopes24) in https://github.com/laravel/horizon/pull/1319
+
+## [v5.21.0](https://github.com/laravel/horizon/compare/v5.20.1...v5.21.0) - 2023-09-18
+
+- Add `horizon:reset-metrics` command by [@trevorgehman](https://github.com/trevorgehman) in https://github.com/laravel/horizon/pull/1318
+
+## [v5.20.1](https://github.com/laravel/horizon/compare/v5.20.0...v5.20.1) - 2023-09-12
+
+- Use available `batch.processedJobs` value from `Illuminate\Bus\Batch` by [@crynobone](https://github.com/crynobone) in https://github.com/laravel/horizon/pull/1315
+
+## [v5.20.0](https://github.com/laravel/horizon/compare/v5.19.2...v5.20.0) - 2023-08-30
+
+- Throws `Laravel\Horizon\Exceptions\ForbiddenException` on unauthorized access by [@joelbutcher](https://github.com/joelbutcher) in https://github.com/laravel/horizon/pull/1308
 
 ## [v5.19.2](https://github.com/laravel/horizon/compare/v5.19.1...v5.19.2) - 2023-08-29
 
