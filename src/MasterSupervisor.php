@@ -166,6 +166,7 @@ class MasterSupervisor implements Pausable, Restartable, Terminable
      */
     public function terminate($status = 0)
     {
+        \Log::info('master supervisor termiate function called');
         $this->working = false;
 
         // First we will terminate all child supervisors so they will gracefully scale
@@ -173,6 +174,9 @@ class MasterSupervisor implements Pausable, Restartable, Terminable
         // active supervisors so we know the maximum amount of time to wait here.
         $longest = app(SupervisorRepository::class)
             ->longestActiveTimeout();
+
+        \Log::info('$longest');
+        \Log::info($longest);
 
         $this->supervisors->each->terminate();
 
@@ -183,6 +187,8 @@ class MasterSupervisor implements Pausable, Restartable, Terminable
                     ->forget($this->name);
 
         $startedTerminating = CarbonImmutable::now();
+        \Log::info('$startedTerminating');
+        \Log::info($startedTerminating);
 
         // Here we will wait until all of the child supervisors finish terminating and
         // then exit the process. We will keep track of a timeout value so that the
@@ -200,6 +206,7 @@ class MasterSupervisor implements Pausable, Restartable, Terminable
             app(CacheFactory::class)->forget('horizon:terminate:wait');
         }
 
+        \Log::info('master supervisor exit called');
         $this->exit($status);
     }
 
